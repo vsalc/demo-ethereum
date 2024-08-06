@@ -1,20 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import paychain from "@/state/paychain";
+import instance from "@/state/paychain";
 import { useState } from "react";
+import { getStaticProps } from "next/dist/build/templates/pages";
+import useSigner from "@/state/signer";
 
 export default function Home() {
+  const signerInfo = useSigner();
   const [user, setUser] = useState("Am I registered?");
 
-  const handleClick = async () => {
-    const isUser = await paychain.methods.getRegistered().call();
-    if (isUser) {
-      setUser("Yes, proceed.");
-    } else {
-      setUser("Nope! Please register to use this app.");
-    }
-  };
+  async function handleClick() {
+    // error right here
+    // const test = await instance.methods.getRegistered().call();
+  }
 
   return (
     <div className="center-screen">

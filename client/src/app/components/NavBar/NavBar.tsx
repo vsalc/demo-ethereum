@@ -12,7 +12,7 @@ export const NavBar = () => {
     <nav className="bg-white-800 text-black p-4 sm:p-6 md:flex md:justify-between md:items-center">
       <div className="container mx-auto flex justify-between items-center">
         <a href="/" className="text-2xl font-bold">
-          Ethertrade
+          PayChain
         </a>
 
         <div className="hidden md:flex">
