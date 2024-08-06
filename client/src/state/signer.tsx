@@ -1,7 +1,8 @@
 "use client";
 
 import { createContext, ReactNode, use, useContext, useState } from "react";
-import { JsonRpcSigner, ethers } from "ethers";
+import { JsonRpcSigner, BrowserProvider, ethers } from "ethers";
+import { sign } from "crypto";
 
 type SignerContextType = {
   signer?: JsonRpcSigner;
