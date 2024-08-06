@@ -170,7 +170,7 @@ contract PayChain {
             sender.cold_wallet -= amount;
         }
 
-        sender.active_wallet += amount;
+        receiver.active_wallet += amount;
 
         sender.total_transactions++;
         receiver.total_transactions++;
@@ -199,7 +199,6 @@ contract PayChain {
         require(current.contact_list.length < maximum_contacts, "ERR: You have reached the maximum number of contacts possible.");
 
         current.contact_list.push(Contact(first_name, last_name, about, contact_address));
-        current.total_transactions++;
     }
 
     function deleteContact(uint256 contact_index) public isUser {
