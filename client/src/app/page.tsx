@@ -12,7 +12,7 @@ export default function Home() {
 
   async function handleClick() {
     // error right here
-    // const test = await instance.methods.getRegistered().call();
+    // const test = await instance.methods.manager();
   }
 
   return (
